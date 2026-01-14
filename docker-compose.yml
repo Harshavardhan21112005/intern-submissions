@@ -1,0 +1,45 @@
+version: '3.8'
+services:
+  backend:
+    build: ./intern_backend
+    container_name: nest_backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_HOST: db
+      DATABASE_PORT: 5432
+      DATABASE_USER: postgres
+      DATABASE_PASSWORD: 1234
+      DATABASE_NAME: ims
+
+  frontend:
+    build: ./intern_frontend
+    container_name: react_frontend
+    ports:
+      - "5173:5173"
+    stdin_open: true
+    tty: true
+
+  db:
+    image: postgres:15
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: ims
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:                        # <-- ADD THIS
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  db_data:

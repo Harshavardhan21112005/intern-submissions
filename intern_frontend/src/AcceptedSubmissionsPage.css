@@ -1,0 +1,96 @@
+/* General layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #013f7e;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.img-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.img-container img {
+  height: 50px;
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Main content */
+.accepted-main {
+  flex-grow: 1;
+  padding: 2rem;
+  background-color: #f5f6fa;
+}
+
+.accepted-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #013f7e;
+}
+
+/* Cards Grid */
+.submissions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.submission-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.submission-card:hover {
+  transform: translateY(-5px);
+}
+
+.submission-card h3 {
+  color: #0d3b66;
+  margin-bottom: 0.5rem;
+}
+
+.submission-card p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Loading / error states */
+.loading,
+.error,
+.empty {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  background-color: #013f7e;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}

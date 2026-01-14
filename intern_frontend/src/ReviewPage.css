@@ -1,0 +1,225 @@
+.rp-app-container {
+  padding-top: 81px;
+  padding-bottom: 51px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: #f4f8fc;
+}
+
+.rp-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 81px;
+  width: 100%;
+  background-color: #013281;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  z-index: 1000;
+}
+
+.rp-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 51px;
+  width: 100%;
+  background-color: #013281;
+  color: white;
+  text-align: center;
+  line-height: 51px;
+  font-weight: 500;
+  z-index: 1000;
+}
+
+.rp-img-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  gap: 10px;
+}
+
+.rp-img-container img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
+.rp-img-container h1 {
+  font-size: 20px;
+  margin: 0;
+  color: #013281;
+  font-weight: bold;
+}
+
+.rp-back-button {
+  margin-left: 20px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #013281;
+  border: 1px solid #013281;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.rp-back-button:hover {
+  background-color: #013281;
+  color: #ffffff;
+}
+
+.rp-main-content {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 132px);
+  box-sizing: border-box;
+}
+
+.rp-profile-container {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.rp-profile-title {
+  color: #013281;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.rp-profile-details {
+  background-color: #f9fbfd;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.rp-profile-details p {
+  margin: 8px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.rp-submissions-list {
+  list-style: none;
+  padding: 0;
+}
+
+.rp-submission-item {
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #e6effb;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rp-submission-item:hover {
+  background-color: #d0e0f5;
+}
+
+.rp-no-data {
+  color: #7f8c8d;
+  text-align: center;
+  padding: 10px;
+}
+
+.rp-edit-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.rp-edit-form h3 {
+  color: #013281;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.rp-edit-form p {
+  margin: 10px 0;
+  color: #333;
+  font-size: 15px;
+}
+
+.rp-edit-form p strong {
+  color: #013281;
+}
+
+.rp-remarks-input,
+.rp-status-select {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fdfdfd;
+}
+
+.rp-status-select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.rp-remarks-input:focus,
+.rp-status-select:focus {
+  border-color: #013281;
+  outline: none;
+}
+
+.rp-submit-button {
+  background-color: #013281;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.rp-submit-button:hover {
+  background-color: #054496;
+}
+
+.rp-error {
+  color: #e74c3c;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.rp-loading {
+  text-align: center;
+  color: #7f8c8d;
+  padding: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .rp-profile-container {
+    padding: 20px;
+  }
+
+  .rp-profile-title {
+    font-size: 20px;
+  }
+
+  .rp-profile-details p {
+    font-size: 14px;
+  }
+
+  .rp-edit-form h3 {
+    font-size: 18px;
+  }
+}

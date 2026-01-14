@@ -1,0 +1,207 @@
+/* Reset & Background */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f8fc;
+}
+
+/* Header & Footer */
+.intern-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 64px;
+  width: 100%;
+  background-color: #013281;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.intern-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 48px;
+  width: 100%;
+  background-color: #013281;
+  color: white;
+  text-align: center;
+  line-height: 48px;
+  font-weight: 500;
+  z-index: 1000;
+}
+
+/* Logo */
+.intern-img-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  gap: 10px;
+}
+
+.intern-img-container img {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+.intern-img-container h1 {
+  font-size: 18px;
+  color: #013281;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Layout container */
+.intern-app-container {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.intern-main-content {
+  padding: 24px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Form Card */
+.intern-form-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  margin-bottom: 80px; /* Ensure space for footer */
+}
+
+.intern-form-container h2 {
+  text-align: center;
+  color: #013281;
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.intern-section {
+  margin-bottom: 24px;
+}
+
+.intern-section h3 {
+  color: #013281;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Grid layout */
+.intern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+/* Inputs & Textareas */
+input, textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #fafafa;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #013281;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(1, 50, 129, 0.1);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Date field */
+.intern-date-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.intern-date-input label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* Submit button container */
+.intern-form-actions {
+  margin-top: 24px;
+  text-align: center;
+}
+
+button {
+  background-color: #013281;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 160px;
+}
+
+button:hover {
+  background-color: #054496;
+}
+
+/* Messages */
+.intern-error {
+  color: #dc2626;
+  font-weight: 500;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.intern-success {
+  color: #16a34a;
+  font-weight: 500;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intern-form-container {
+    padding: 24px;
+  }
+
+  .intern-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intern-header {
+    padding: 0 16px;
+  }
+
+  .intern-img-container h1 {
+    font-size: 16px;
+  }
+
+  .intern-img-container img {
+    height: 32px;
+    width: 32px;
+  }
+}

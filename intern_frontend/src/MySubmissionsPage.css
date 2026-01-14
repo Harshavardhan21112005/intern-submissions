@@ -1,0 +1,260 @@
+/* Unique styles for MySubmissionsPage */
+.ms-app-container {
+  padding-top: 81px;
+  padding-bottom: 51px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: #f4f8fc;
+}
+
+.ms-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 81px;
+  width: 100%;
+  background-color: #013281;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  z-index: 1000;
+}
+
+.ms-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 51px;
+  width: 100%;
+  background-color: #013281;
+  color: white;
+  text-align: center;
+  line-height: 51px;
+  font-weight: 500;
+  z-index: 1000;
+}
+
+.ms-img-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  gap: 10px;
+}
+
+.ms-img-container img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
+.ms-img-container h1 {
+  font-size: 20px;
+  margin: 0;
+  color: #013281;
+  font-weight: bold;
+}
+
+.ms-home-button {
+  margin-left: 20px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #013281;
+  border: 1px solid #013281;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ms-home-button:hover {
+  background-color: #013281;
+  color: #ffffff;
+}
+
+.ms-main-content {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 132px);
+  box-sizing: border-box;
+}
+
+.ms-submissions-reviews-container {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.ms-submissions-panel,
+.ms-reviews-panel {
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
+}
+
+.ms-submissions-title,
+.ms-reviews-title {
+  color: #013281;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #013281;
+  padding-bottom: 5px;
+}
+
+.ms-submissions-list,
+.ms-reviews-list {
+  list-style: none;
+  padding: 0;
+}
+
+.ms-submission-item,
+.ms-review-item {
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #f9fbfd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ms-submission-item:hover {
+  background-color: #e6effb;
+}
+
+.ms-review-item {
+  cursor: default;
+}
+
+.ms-submission-title {
+  font-weight: 500;
+  color: #2c3e50;
+  font-size: 16px;
+}
+
+.ms-submission-date {
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+.ms-review-status {
+  font-weight: 500;
+  color: #27ae60;
+}
+
+.ms-review-remarks {
+  color: #34495e;
+  display: block;
+  margin-top: 5px;
+}
+
+.ms-review-by {
+  color: #7f8c8d;
+  font-size: 13px;
+}
+
+.ms-no-data {
+  color: #7f8c8d;
+  text-align: center;
+  padding: 10px;
+}
+
+.ms-loading,
+.ms-error {
+  text-align: center;
+  color: #e74c3c;
+  padding: 10px;
+}
+
+.ms-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.ms-modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.ms-modal-title {
+  color: #013281;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.ms-modal-content p {
+  margin: 10px 0;
+  color: #333;
+  font-size: 15px;
+}
+
+.ms-modal-content strong {
+  color: #013281;
+}
+
+.ms-modal-close {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.ms-modal-close:hover {
+  background-color: #c0392b;
+}
+.ms-download-link {
+  color: #003366;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-left: 8px;
+  font-size: 0.9rem;
+}
+
+.ms-download-link:hover {
+  color: #0055aa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ms-submissions-reviews-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ms-submissions-panel,
+  .ms-reviews-panel {
+    min-height: auto;
+  }
+
+  .ms-submissions-title,
+  .ms-reviews-title {
+    font-size: 18px;
+  }
+
+  .ms-modal-content {
+    width: 95%;
+  }
+}

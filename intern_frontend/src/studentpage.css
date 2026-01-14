@@ -1,0 +1,128 @@
+/* Reset and base styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* App layout with space for fixed header and footer */
+.app-container {
+  padding-top: 81px; /* header height */
+  padding-bottom: 51px; /* footer height */
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 81px;
+  width: 100%;
+  background-color: #013281;
+  display: flex;
+  justify-content: space-between; /* Align logo to left and button to right */
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo container with white background */
+.img-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  gap: 12px;
+}
+
+/* Logo image */
+.img-container img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
+/* Brand title */
+.img-container h1 {
+  font-size: 20px;
+  margin: 0;
+  color: #013281;
+  font-weight: bold;
+}
+
+/* Logout button */
+.logout-button {
+  margin-right: 20px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #013281;
+  border: 1px solid #013281;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #013281;
+  color: #ffffff;
+}
+
+/* Main scrollable content area */
+.smain-content {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: flex-start;
+  min-height: calc(100vh - 132px); /* Adjust for header and footer */
+  box-sizing: border-box;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 51px;
+  width: 100%;
+  background-color: #013281;
+  color: white;
+  text-align: center;
+  line-height: 51px;
+  font-weight: 500;
+  z-index: 1000;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 10px;
+  }
+
+  .img-container {
+    padding: 6px 12px;
+  }
+
+  .img-container h1 {
+    font-size: 18px;
+  }
+
+  .logout-button {
+    padding: 8px 16px;
+    margin-right: 10px;
+  }
+
+  .smain-content {
+    padding: 10px;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,61 @@
+/* StaffPage specific styles */
+.sp-main-content {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 132px); /* Adjust based on header (81px) + footer (51px) */
+  box-sizing: border-box;
+}
+
+.sp-cards-container {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap; /* Allows stacking on smaller screens */
+}
+
+.sp-card {
+  flex: 1;
+  background-color: white;
+  padding: 40px 20px;
+  border: 2px solid #013281;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #013281;
+  min-width: 200px; /* Minimum width to ensure readability */
+}
+
+.sp-card:hover {
+  background-color: #013281;
+  color: #ffffff;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.sp-card-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sp-cards-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sp-card {
+    padding: 30px 15px;
+    min-width: 0; /* Allow full width on mobile */
+  }
+
+  .sp-card-title {
+    font-size: 20px;
+  }
+}
